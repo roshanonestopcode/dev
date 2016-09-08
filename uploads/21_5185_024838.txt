@@ -1,0 +1,69 @@
+users table{
+subscribe int 11,
+terms int 11
+description text
+licence varchar 255
+
+}
+add table usertypes
+add experience experience
+
+
+questions table{
+anonymous int 11
+created_on datetime
+topic text
+}
+
+messages table{
+  question_id int 11
+}
+
+rating table{
+ total_points int 11,
+created datatime
+modified date time
+status int 11
+COMMENT text
+}
+
+
+DROP TABLE IF EXISTS `post_case`;
+
+CREATE TABLE `post_case` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userId` int(11) DEFAULT NULL,
+  `title` text,
+  `category` int(11) DEFAULT NULL,
+  `details` text,
+  `fee` float DEFAULT NULL,
+  `city` int(11) DEFAULT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `modified_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+
+DROP TABLE IF EXISTS `job_proposal`;
+
+CREATE TABLE `job_proposal` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userId` int(11) DEFAULT NULL,
+  `jobid` int(11) DEFAULT NULL,
+  `proposalamt` double DEFAULT NULL,
+  `coverletter` text,
+  `created_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `accepted_job_proposal`;
+
+CREATE TABLE `accepted_job_proposal` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `jobid` int(11) DEFAULT NULL,
+  `clientId` int(11) DEFAULT NULL,
+  `lawyerId` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;

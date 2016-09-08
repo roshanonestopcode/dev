@@ -1,0 +1,23 @@
+.container_one{
+		/*	height:670px;*/
+			height:10px;
+			font-family: "Malgun Gothic";
+			}
+ /*.container_one::before{
+			content: "";
+			background-size:cover;
+			background-image: none !important;
+                       background-image:url(../assets/images/banner.jpg);
+			opacity: 0.70;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: -1;
+			background-attachment:fixed;
+			}*/
+.container_one::before{
+     background-color:#fff;
+     background-image: none !important;
+ }
